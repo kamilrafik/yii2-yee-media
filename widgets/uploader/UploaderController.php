@@ -197,7 +197,7 @@ abstract class UploaderController extends \yii\web\Controller
          * @var yeesoft\media\models\Media
          */
         $model = Media::findOne([
-            "{$tableName}.id" => $id,
+            "{$tableName}.[[id]]" => $id,
             "{$tableName}.created_by" => Yii::$app->user->identity->id,
         ]);
 
